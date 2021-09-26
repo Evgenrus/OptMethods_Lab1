@@ -1,7 +1,7 @@
 import scala.annotation.tailrec
 import scala.io.StdIn.{readInt, readLine}
 import scala.util.{Failure, Success, Try}
-import scala.math.pow
+import scala.math.{abs, pow, sqrt}
 
 object Main {
 
@@ -23,7 +23,11 @@ object Main {
     print("Choose method")
     val res = readLine() match {
       case "1" => equalIntervals(a, b, n, mult, Double.MaxValue)
-      case "2" => Double.MaxValue //Todo Метод золотого сечения
+      case "2" => {
+        val y = a + ((1 + sqrt (5) ) / 2) * (b - a)
+        val z = a + b - y
+        goldenRatio(a, b, y, z, mult, 0)
+      }
       case _ => throw new UnknownError()
     }
     print("result, x = ", res)
@@ -80,5 +84,23 @@ object Main {
   def calc(members: Array[Double], x: Double): Double = {
     val res = for (i <- members.indices) yield members(i) * pow(x, i)
     res.toArray.sum
+  }
+
+  @tailrec
+  def goldenRatio(a: Double, b: Double, y: Double, z: Double, members: Array[Double], k: Int): Double = {
+    val resY = calc(members, y)
+    val resZ = calc(members, z)
+
+    val (y1, z1, a1, b1) = (resY, resZ) match {
+      case _ if(resY > resZ)  => (z, y+b-z, y, b)
+      case _ if(resY <= resZ) => (a+z-y, y, a, z)
+      case _ => throw new UnknownError()
+    }
+
+    val difference = abs(b1 - a1)
+    difference match {
+      case _ if(difference > 0.00001) => goldenRatio(a1, b1, y1, z1, members, k+1)
+      case _ if(difference <= 0.00001) => (b1 + a1)/2
+    }
   }
 }

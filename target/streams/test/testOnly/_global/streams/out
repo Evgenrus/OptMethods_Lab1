@@ -1,0 +1,19 @@
+[debug] Running TaskDef(Test, org.scalatest.tools.Framework$$anon$1@53ee222, false, [SuiteSelector])
+[info] Test:
+[info] x^2 - 4x + 4 by EqualIntervals
+[info] - should x = 1
+[info] 10x^3 + 3x^2 + x + 5 by EqualIntervals on [-5, 5]
+[info] - should -5.00
+[info] x^2 - 4x + 4 by goldenRatio
+[info] - should x = 1 *** FAILED ***
+[info]   2.499999242798781 was not less than 1.0E-4 (Test.scala:20)
+[info] 10x^3 + 3x^2 + x + 5 by goldenRatio on [-5, 5]
+[info] - should -5.00
+[info] Run completed in 179 milliseconds.
+[info] Total number of tests run: 4
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 3, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error] 	Test
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful

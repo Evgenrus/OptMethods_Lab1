@@ -1,0 +1,14 @@
+[debug] > Exec({file:/D:/dev/OptimisationMethods/Lab1/}lab1/ testOnly Test, None, None)
+[debug] Evaluating tasks: Test / testOnly
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\dev\OptimisationMethods\Lab1\target\scala-2.13\classes ...
+[info] Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.6. Compiling...
+[warn] Canceling execution...
+[info] Attempting to fetch org.scala-sbt:compiler-bridge_2.13:1.5.7.
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[error] Cancelled: {file:/D:/dev/OptimisationMethods/Lab1/}lab1/ testOnly Test
+[error] Cancelled: {file:/D:/dev/OptimisationMethods/Lab1/}lab1/ testOnly Test
+[error] Use 'last' for the full log.
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

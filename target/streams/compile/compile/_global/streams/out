@@ -1,1 +1,9 @@
 [debug] Acquiring lock on file D:\dev\OptimisationMethods\Lab1\project\target\.sbt-compilation-infos\lab1-compile\.sbt-idea-lock ...
+[warn] D:\dev\OptimisationMethods\Lab1\src\main\scala\Main.scala:69:12: patterns after a variable pattern cannot match (SLS 8.1.1)
+[warn]       case len => (x(index - 1), x(index))
+[warn]            ^
+[warn] D:\dev\OptimisationMethods\Lab1\src\main\scala\Main.scala:70:19: unreachable code due to variable pattern 'len' on line 69
+[warn]       case _   => (x(index - 1), x(index + 1))
+[warn]                   ^
+[warn] two warnings found
+[debug] Releasing lock on file D:\dev\OptimisationMethods\Lab1\project\target\.sbt-compilation-infos\lab1-compile\.sbt-idea-lock.
